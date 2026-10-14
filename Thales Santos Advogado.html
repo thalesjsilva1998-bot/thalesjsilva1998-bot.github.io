@@ -1,0 +1,542 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Thales Santos Advogado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: forest bands (hero, palestras, e-book) alternating with cream reading sections; the e-book's half-sun is the only ornament. */
+:root {
+  /* Single-look brand palette taken from the e-book, used in both OS themes by choice */
+  --forest: #14281D;
+  --forest-2: #1D3527;
+  --line-dark: #2F4A3B;
+  --sun: #E2A33A;
+  --sun-ink: #8A5A10;
+  --cream: #FBF9F4;
+  --sand: #EFE8D8;
+  --ink: #1D1A15;
+  --ink-soft: #4F4A42;
+  --rule: #D9D0BD;
+  --on-dark: #F4EFE3;
+  --on-dark-soft: #C9CEC2;
+  --white: #FFFFFF;
+  --display: 'IBM Plex Sans Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+  --body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --wrap: 1120px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: 24px; }
+@media (max-width: 480px) { .wrap { padding-inline: 18px; } }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sun-ink); margin: 0 0 14px; }
+.dark .eyebrow { color: var(--sun); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(34px, 5vw, 52px); color: var(--forest); }
+.dark h2 { color: var(--on-dark); }
+h3 { font-size: 24px; font-weight: 600; color: var(--forest); line-height: 1.15; }
+p { margin: 0; text-wrap: pretty; }
+.lead { font-size: 20px; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; }
+.dark { background: var(--forest); color: var(--on-dark); }
+.dark .lead { color: var(--on-dark-soft); }
+section { padding-block: 96px; }
+@media (max-width: 720px) { section { padding-block: 64px; } }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: 0.01em; text-decoration: none; border: 1.5px solid transparent; cursor: pointer; transition: transform .15s ease, background-color .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+.btn-sun { background: var(--sun); color: var(--forest); }
+.btn-sun:hover { background: #ECB453; }
+.btn-ghost { border-color: var(--line-dark); color: var(--on-dark); background: transparent; }
+.btn-ghost:hover { border-color: var(--sun); }
+.btn-forest { background: var(--forest); color: var(--on-dark); }
+.btn-forest:hover { background: var(--forest-2); }
+.btn-line { border-color: var(--forest); color: var(--forest); background: transparent; }
+.btn-line:hover { background: var(--sand); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--forest); border-bottom: 1px solid var(--line-dark); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--on-dark); }
+.brand-mark { width: 34px; height: 34px; flex: none; }
+.brand-name { font-family: var(--display); font-weight: 700; font-size: 20px; line-height: 1; }
+.brand-role { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-soft); margin-top: 4px; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { font-family: var(--display); font-weight: 500; font-size: 16px; color: var(--on-dark-soft); text-decoration: none; }
+.nav a:hover { color: var(--on-dark); }
+.nav .btn { min-height: 40px; padding: 0 18px; font-size: 15px; color: var(--forest); }
+@media (max-width: 860px) { .nav a:not(.btn) { display: none; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: 88px 120px; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 56px; align-items: end; }
+.hero h1 { font-size: clamp(44px, 6.4vw, 78px); color: var(--on-dark); letter-spacing: -0.01em; }
+.hero h1 em { font-style: normal; color: var(--sun); }
+.hero .lead { margin-top: 26px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.quote { border-top: 1px solid var(--line-dark); padding-top: 22px; }
+.quote .eyebrow { margin-bottom: 12px; }
+.quote blockquote { margin: 0; font-style: italic; font-size: 21px; line-height: 1.5; color: var(--on-dark); }
+.quote figcaption { margin-top: 14px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--on-dark-soft); }
+.hero-sun { position: absolute; right: -60px; bottom: -150px; width: 520px; max-width: 70%; opacity: 0.95; pointer-events: none; }
+.areas-line { position: relative; z-index: 1; margin-top: 64px; display: flex; flex-wrap: wrap; gap: 10px 28px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-soft); }
+.areas-line span::before { content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 10px; background: var(--sun); border-radius: 50%; vertical-align: 1px; }
+@media (max-width: 860px) {
+  .hero { padding-block: 64px 160px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero-sun { width: 340px; max-width: 85%; right: -40px; bottom: -70px; }
+}
+
+/* Áreas */
+.section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; align-items: end; margin-bottom: 56px; }
+@media (max-width: 860px) { .section-head { grid-template-columns: minmax(0, 1fr); } }
+.areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--forest); }
+.area { padding: 30px 32px 8px 0; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.area + .area { padding-left: 32px; border-left: 1px solid var(--rule); }
+.area-k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sun-ink); }
+.area p { font-size: 17px; color: var(--ink-soft); }
+.area ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 10px; }
+.area li { position: relative; padding-left: 20px; font-size: 16.5px; line-height: 1.45; }
+.area li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 9px; height: 1.5px; background: var(--sun-ink); }
+@media (max-width: 860px) {
+  .areas { grid-template-columns: minmax(0, 1fr); }
+  .area, .area + .area { padding: 28px 0; border-left: 0; }
+  .area + .area { border-top: 1px solid var(--rule); }
+}
+
+/* Para quem */
+.who { background: var(--sand); }
+.who-list { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.who-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr) auto; gap: 24px 48px; align-items: start; padding: 30px 0; border-bottom: 1px solid var(--rule); }
+.who-row h3 { font-size: 26px; }
+.who-row p { color: var(--ink-soft); font-size: 17.5px; max-width: 60ch; }
+.who-row .btn { min-height: 42px; font-size: 15px; }
+@media (max-width: 860px) { .who-row { grid-template-columns: minmax(0, 1fr); gap: 12px; } .who-row .btn { justify-self: start; margin-top: 6px; } }
+
+/* Palestras */
+.talks-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px 72px; align-items: start; }
+.talks-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-dark); }
+.talks-list li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
+.talks-list .n { font-family: var(--display); font-weight: 700; font-size: 20px; color: var(--sun); }
+.talks-list strong { display: block; font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--on-dark); line-height: 1.2; }
+.talks-list span.d { display: block; margin-top: 4px; font-size: 16px; color: var(--on-dark-soft); }
+.talks-grid .btn { margin-top: 30px; }
+@media (max-width: 860px) { .talks-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* E-book */
+.book { background: var(--cream); }
+.book-grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 64px; align-items: start; }
+.cover { position: relative; width: 100%; max-width: 340px; aspect-ratio: 794 / 1123; background: var(--forest); color: var(--on-dark); border-radius: 4px 10px 10px 4px; overflow: hidden; box-shadow: 0 1px 0 rgba(20,40,29,.2), 0 24px 48px -20px rgba(20,40,29,.55); padding: 9% 10% 8%; display: flex; flex-direction: column; }
+.cover::after { content: ''; position: absolute; inset: 0 auto 0 0; width: 10px; background: linear-gradient(90deg, rgba(0,0,0,.28), rgba(0,0,0,0)); }
+.cover-top { display: flex; justify-content: space-between; font-family: var(--mono); font-size: clamp(6px, 1.7vw, 7.5px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--sun); }
+.cover-title { margin-top: 16%; font-family: var(--display); font-weight: 700; font-size: clamp(28px, 8vw, 38px); line-height: 0.92; color: var(--on-dark); }
+.cover-sub { margin-top: 7%; font-style: italic; font-size: clamp(9px, 2.4vw, 11px); line-height: 1.4; color: var(--on-dark-soft); max-width: 85%; }
+.cover-sun { position: absolute; left: 10%; right: 10%; bottom: 20%; }
+.cover-author { margin-top: auto; position: relative; z-index: 1; }
+.cover-author b { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(11px, 3vw, 13px); }
+.cover-author span { font-family: var(--mono); font-size: clamp(5px, 1.5vw, 6.5px); letter-spacing: 0.04em; color: var(--on-dark-soft); }
+.book h2 { font-size: clamp(38px, 5.5vw, 58px); }
+.book .subtitle { margin-top: 12px; font-style: italic; font-size: 21px; color: var(--ink-soft); }
+.book .lead { margin-top: 22px; }
+.book-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.chip { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; padding: 6px 12px; border-radius: 999px; background: var(--sand); color: var(--forest); }
+.inside { margin-top: 30px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; list-style: none; padding: 0; }
+.inside li { position: relative; padding-left: 26px; font-size: 16.5px; line-height: 1.45; }
+.inside li::before { content: ''; position: absolute; left: 0; top: 0.32em; width: 12px; height: 12px; border: 1.5px solid var(--forest); border-radius: 2px; }
+.inside li::after { content: ''; position: absolute; left: 3px; top: calc(0.32em + 2px); width: 6px; height: 3.5px; border-left: 1.5px solid var(--sun-ink); border-bottom: 1.5px solid var(--sun-ink); transform: rotate(-45deg); }
+.buy { margin-top: 36px; padding: 26px 28px; border: 1px solid var(--rule); border-radius: 14px; background: var(--white); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 32px; align-items: center; }
+.price small { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sun-ink); }
+.price b { display: block; font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; color: var(--forest); font-variant-numeric: tabular-nums; margin-top: 6px; }
+.buy-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.buy-note { grid-column: 1 / -1; font-size: 15px; color: var(--ink-soft); }
+@media (max-width: 860px) {
+  .book-grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .cover { max-width: 280px; }
+  .inside { grid-template-columns: minmax(0, 1fr); }
+  .buy { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Sobre */
+.about-grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 64px; align-items: start; }
+.portrait { width: 100%; max-width: 300px; aspect-ratio: 4 / 5; border-radius: 14px; background: var(--forest); position: relative; overflow: hidden; display: grid; place-items: center; }
+.portrait .mono { font-family: var(--display); font-weight: 700; font-size: 96px; color: var(--on-dark); letter-spacing: -0.02em; position: relative; z-index: 1; margin-bottom: 30%; }
+.portrait svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; }
+.about-text { display: grid; gap: 18px; max-width: 66ch; }
+.about-text p { font-size: 18.5px; }
+.facts { margin-top: 12px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
+.fact { padding: 18px 20px 0 0; min-width: 0; }
+.fact + .fact { padding-left: 20px; border-left: 1px solid var(--rule); }
+.fact small { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sun-ink); }
+.fact span { display: block; margin-top: 6px; font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.25; color: var(--forest); }
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .portrait { max-width: 220px; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .fact, .fact + .fact { padding: 16px 0; border-left: 0; }
+  .fact + .fact { border-top: 1px solid var(--rule); }
+}
+
+/* Contato */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.channels { display: grid; gap: 0; border-top: 1px solid var(--line-dark); margin-top: 32px; }
+.channel { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
+.channel small { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-soft); }
+.channel .v { font-size: 19px; color: var(--on-dark); user-select: all; overflow-wrap: anywhere; min-width: 0; }
+.copy { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sun); background: transparent; border: 1px solid var(--line-dark); border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+.copy:hover { border-color: var(--sun); }
+.form { background: var(--forest-2); border: 1px solid var(--line-dark); border-radius: 16px; padding: 30px; display: grid; gap: 16px; }
+.form h3 { color: var(--on-dark); font-size: 24px; }
+.form p.hint { font-size: 15.5px; color: var(--on-dark-soft); }
+.field { display: grid; gap: 6px; }
+.field label { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-soft); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 17px; color: var(--ink); background: var(--cream); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; }
+.field textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+.form .btn { justify-self: start; }
+.note { margin-top: 26px; font-size: 15px; color: var(--on-dark-soft); }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } .form { padding: 22px; } }
+@media (max-width: 480px) { .channel { grid-template-columns: minmax(0, 1fr) auto; } .channel small { grid-column: 1 / -1; } }
+
+/* Footer */
+footer { background: var(--forest); color: var(--on-dark-soft); border-top: 1px solid var(--line-dark); padding-block: 36px; font-size: 14.5px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 32px; }
+footer b { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--on-dark); }
+footer .legal { flex-basis: 100%; font-size: 13.5px; line-height: 1.5; padding-top: 14px; border-top: 1px solid var(--line-dark); }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Thales Santos, início">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="16" fill="#1D3527" stroke="#2F4A3B"></circle>
+        <path d="M6 22 A11 11 0 0 1 28 22 Z" fill="#E2A33A"></path>
+        <rect x="5" y="17" width="24" height="1.4" fill="#1D3527"></rect>
+        <rect x="5" y="19.6" width="24" height="1.8" fill="#1D3527"></rect>
+        <rect x="8" y="24.5" width="18" height="1" fill="#E2A33A"></rect>
+      </svg>
+      <span><span class="brand-name">Thales Santos</span><span class="brand-role">Advogado</span></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#atuacao">Atuação</a>
+      <a href="#palestras">Palestras</a>
+      <a href="#ebook">E-book</a>
+      <a href="#sobre">Sobre</a>
+      <a class="btn btn-sun" href="#contato">Fale comigo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero dark">
+    <svg class="hero-sun" viewBox="0 0 520 300" aria-hidden="true">
+      <path d="M20 300 A240 240 0 0 1 500 300 Z" fill="#E2A33A"></path>
+      <rect x="0" y="196" width="520" height="7" fill="#14281D"></rect>
+      <rect x="0" y="222" width="520" height="11" fill="#14281D"></rect>
+      <rect x="0" y="252" width="520" height="15" fill="#14281D"></rect>
+      <rect x="0" y="284" width="520" height="16" fill="#14281D"></rect>
+    </svg>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Advocacia em Direito Ambiental e Público</p>
+          <h1>Direito ambiental e público <em>com os pés no semiárido.</em></h1>
+          <p class="lead">Sou Thales Santos, advogado especialista em Direito Público e Ambiental. Oriento municípios, gestores e pessoas a cumprir a lei com segurança, com atenção especial à prevenção de conflitos com órgãos de fiscalização e de controle.</p>
+          <div class="hero-actions">
+            <a class="btn btn-sun js-wa" data-msg="Olá, Thales! Vim pelo seu site e gostaria de conversar." href="https://wa.me/5579998338450" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.2-.2-.5-.3Z"/></svg>
+              Conversar pelo WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#ebook">Conhecer o e-book</a>
+          </div>
+        </div>
+        <figure class="quote">
+          <p class="eyebrow">Constituição Federal, art. 225</p>
+          <blockquote>Todos têm direito ao meio ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida.</blockquote>
+          <figcaption>O ponto de partida de cada caso ambiental</figcaption>
+        </figure>
+      </div>
+      <div class="areas-line" aria-label="Áreas de atuação">
+        <span>Direito Ambiental</span><span>Público e Administrativo</span><span>Previdenciário</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="atuacao">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Áreas de atuação</p>
+          <h2>Onde posso ajudar</h2>
+        </div>
+        <p class="lead">Cada caso começa por entender a realidade de quem me procura. Depois vem o caminho jurídico: o que a lei exige, o que pode ser negociado e o que precisa de defesa.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <span class="area-k">Ambiental</span>
+          <h3>Direito Ambiental</h3>
+          <p>Do licenciamento à defesa em processos, com atenção à realidade do semiárido.</p>
+          <ul>
+            <li>Licenciamento e regularização de atividades</li>
+            <li>Defesa em autos de infração e embargos</li>
+            <li>Resposta a inquéritos civis e negociação de TACs</li>
+            <li>CAR, PRA e adequação de imóveis rurais</li>
+            <li>Gestão ambiental municipal: leis, conselhos e fundos</li>
+          </ul>
+        </article>
+        <article class="area">
+          <span class="area-k">Público</span>
+          <h3>Direito Público e Administrativo</h3>
+          <p>Apoio a quem decide na administração pública, com foco em prevenção.</p>
+          <ul>
+            <li>Assessoria a municípios e gestores públicos</li>
+            <li>Prevenção no direito administrativo sancionador</li>
+            <li>Processos administrativos e defesas</li>
+            <li>Respostas ao Ministério Público e aos Tribunais de Contas</li>
+            <li>Políticas públicas e projetos de alcance social</li>
+          </ul>
+        </article>
+        <article class="area">
+          <span class="area-k">Previdenciário</span>
+          <h3>Direito Previdenciário</h3>
+          <p>Orientação clara para buscar o benefício a que a pessoa tem direito.</p>
+          <ul>
+            <li>Aposentadorias e pensões</li>
+            <li>Benefício assistencial (BPC/LOAS)</li>
+            <li>Revisão de benefícios</li>
+            <li>Recursos administrativos no INSS</li>
+            <li>Ações judiciais previdenciárias</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="who" aria-labelledby="quem">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Para quem</p>
+          <h2 id="quem">Três frentes de trabalho</h2>
+        </div>
+      </div>
+      <div class="who-list">
+        <div class="who-row">
+          <h3>Prefeituras e gestores públicos</h3>
+          <p>Consultoria preventiva, apoio na resposta a órgãos de controle, estruturação do sistema municipal de meio ambiente e formação de equipes.</p>
+          <a class="btn btn-line js-wa" data-msg="Olá, Thales! Falo em nome de um município/órgão público e gostaria de conversar sobre assessoria." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Falar sobre o município</a>
+        </div>
+        <div class="who-row">
+          <h3>Pessoas e famílias</h3>
+          <p>Atendimento próximo em questões ambientais, administrativas e previdenciárias, com explicação em linguagem simples de cada etapa do processo.</p>
+          <a class="btn btn-line js-wa" data-msg="Olá, Thales! Gostaria de agendar um atendimento." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Agendar atendimento</a>
+        </div>
+        <div class="who-row">
+          <h3>Rede jurídica e acadêmica</h3>
+          <p>Parcerias com escritórios, eventos, palestras, artigos e projetos em Direito Ambiental e Público. Conversas que fortalecem quem trabalha com o tema.</p>
+          <a class="btn btn-line js-wa" data-msg="Olá, Thales! Gostaria de conversar sobre uma parceria." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Propor parceria</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="palestras" class="dark">
+    <div class="wrap talks-grid">
+      <div>
+        <p class="eyebrow">Palestras e formações</p>
+        <h2>Direito Ambiental aplicado ao semiárido</h2>
+        <p class="lead" style="margin-top: 22px">Encontros para gestores, escolas e produtores, pensados para a realidade de municípios pequenos: pouca estrutura, muita responsabilidade e a seca como pano de fundo.</p>
+        <a class="btn btn-sun js-wa" data-msg="Olá, Thales! Gostaria de convidar você para uma palestra/formação." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Convidar para uma palestra</a>
+      </div>
+      <ol class="talks-list">
+        <li><span class="n">1</span><div><strong>Gestão ambiental municipal</strong><span class="d">Lei, conselho, fundo e equipe mínima para o município exercer sua competência.</span></div></li>
+        <li><span class="n">2</span><div><strong>Quando o Ministério Público bate à porta</strong><span class="d">Inquérito civil, recomendação e TAC: como responder, negociar e cumprir.</span></div></li>
+        <li><span class="n">3</span><div><strong>Educação ambiental que transforma</strong><span class="d">Projetos escolares que sobrevivem às trocas de governo.</span></div></li>
+        <li><span class="n">4</span><div><strong>O produtor rural em dia com a lei</strong><span class="d">CAR, PRA, licenciamento e o que fazer diante de um auto de infração.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="ebook" class="book">
+    <div class="wrap book-grid">
+      <div class="cover" role="img" aria-label="Capa do e-book Entre a Seca e a Norma">
+        <div class="cover-top"><span>Guia prático</span><span>Semiárido</span></div>
+        <div class="cover-title">Entre a Seca<br>e a Norma</div>
+        <div class="cover-sub">Guia de política ambiental municipal para gestores, escolas e produtores do semiárido</div>
+        <svg class="cover-sun" viewBox="0 0 200 110" aria-hidden="true">
+          <path d="M10 100 A90 90 0 0 1 190 100 Z" fill="#E2A33A"></path>
+          <rect x="0" y="66" width="200" height="3" fill="#14281D"></rect>
+          <rect x="0" y="76" width="200" height="4" fill="#14281D"></rect>
+          <rect x="0" y="88" width="200" height="5" fill="#14281D"></rect>
+          <rect x="0" y="100" width="200" height="1.2" fill="#E2A33A"></rect>
+          <rect x="16" y="106" width="168" height="0.8" fill="#2F4A3B"></rect>
+        </svg>
+        <div class="cover-author"><b>Thales Santos</b><span>Advogado especialista em Direito Público e Ambiental</span></div>
+      </div>
+      <div>
+        <p class="eyebrow">E-book</p>
+        <h2>Entre a Seca e a Norma</h2>
+        <p class="subtitle">Guia de política ambiental municipal para gestores, escolas e produtores do semiárido</p>
+        <p class="lead">Um guia prático para quem vive e decide no semiárido. Em 12 capítulos, mostra como montar o sistema municipal de meio ambiente, responder ao Ministério Público, negociar TACs que possam ser cumpridos, levar educação ambiental às escolas e regularizar a propriedade rural.</p>
+        <div class="book-meta"><span class="chip">PDF · 58 páginas</span><span class="chip">12 capítulos</span><span class="chip">Checklists e modelos</span></div>
+        <ul class="inside">
+          <li>Sistema Municipal de Meio Ambiente com orçamento curto</li>
+          <li>Protocolo de resposta ao MP e modelo de plano de ação</li>
+          <li>Checklist para negociar um TAC exequível</li>
+          <li>10 teses do STF e do STJ em linguagem simples</li>
+          <li>Seis projetos de educação ambiental para o semiárido</li>
+          <li>CAR, PRA, licenciamento e autos de infração</li>
+          <li>Roteiro de 12 meses e checklist final</li>
+          <li>Glossário e referências legais atualizadas</li>
+        </ul>
+        <div class="buy">
+          <div class="price"><small id="price-label">Preço de lançamento</small><b id="price">R$ 47</b></div>
+          <div class="buy-actions" id="buy-actions">
+            <a class="btn btn-forest js-wa" data-msg="Olá, Thales! Quero comprar o e-book Entre a Seca e a Norma." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Comprar pelo WhatsApp (Pix)</a>
+          </div>
+          <p class="buy-note">Para prefeituras, câmaras e instituições, há licença institucional com várias cópias, que pode vir junto com uma palestra. <a class="js-wa" data-msg="Olá, Thales! Tenho interesse na licença institucional do e-book Entre a Seca e a Norma." href="https://wa.me/5579998338450" target="_blank" rel="noopener">Pedir proposta</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="who">
+    <div class="wrap about-grid">
+      <div class="portrait" role="img" aria-label="Monograma de Thales Santos">
+        <span class="mono">TS</span>
+        <svg viewBox="0 0 300 150" aria-hidden="true">
+          <path d="M40 150 A110 110 0 0 1 260 150 Z" fill="#E2A33A"></path>
+          <rect x="0" y="100" width="300" height="4" fill="#14281D"></rect>
+          <rect x="0" y="116" width="300" height="6" fill="#14281D"></rect>
+          <rect x="0" y="134" width="300" height="8" fill="#14281D"></rect>
+        </svg>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">Sobre</p>
+        <h2>Thales Santos Silva</h2>
+        <p>Sou advogado especialista em Direito Público e Ambiental e exerço o cargo de secretário municipal adjunto de Meio Ambiente. Também atuo com projetos de saneamento judicial e tenho experiência em projetos de alcance social e em iniciativas de cunho preventivo no campo do direito administrativo sancionador.</p>
+        <p>Minhas raízes estão no sertão de Sergipe, e é de lá que vem o meu modo de trabalhar: ouvir primeiro, explicar com clareza e buscar soluções que caibam na realidade de quem precisa delas. Foi essa experiência que deu origem ao e-book <em>Entre a Seca e a Norma</em>.</p>
+        <div class="facts">
+          <div class="fact"><small>Formação</small><span>Especialista em Direito Público</span></div>
+          <div class="fact"><small>Gestão pública</small><span>Secretário municipal adjunto de Meio Ambiente</span></div>
+          <div class="fact"><small>Autor</small><span>Entre a Seca e a Norma (2026)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="dark">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos conversar</h2>
+        <p class="lead" style="margin-top: 20px">Atendimento mediante agendamento. Conte em poucas linhas o que precisa e eu retorno.</p>
+        <div class="channels">
+          <div class="channel"><small>WhatsApp</small><span class="v" id="v-phone">(79) 99833-8450</span><button class="copy" type="button" data-copy="v-phone">Copiar</button></div>
+          <div class="channel"><small>E-mail</small><span class="v" id="v-email">thalesdelladv@hotmail.com</span><button class="copy" type="button" data-copy="v-email">Copiar</button></div>
+          <div class="channel" id="ch-instagram" hidden><small>Instagram</small><a class="v" id="v-instagram" href="#" target="_blank" rel="noopener"></a><span></span></div>
+          <div class="channel" id="ch-linkedin" hidden><small>LinkedIn</small><a class="v" id="v-linkedin" href="#" target="_blank" rel="noopener"></a><span></span></div>
+        </div>
+      </div>
+      <form class="form" id="wa-form" novalidate>
+        <h3>Escreva sua mensagem</h3>
+        <p class="hint">Ela segue pronta para o meu WhatsApp. Você revisa antes de enviar.</p>
+        <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" placeholder="Como posso te chamar?"></div>
+        <div class="field"><label for="f-assunto">Assunto</label>
+          <select id="f-assunto" name="assunto">
+            <option>Direito Ambiental</option>
+            <option>Direito Público e Administrativo</option>
+            <option>Direito Previdenciário</option>
+            <option>Palestra ou formação</option>
+            <option>E-book Entre a Seca e a Norma</option>
+            <option>Parceria</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" placeholder="Conte brevemente o que você precisa."></textarea></div>
+        <a class="btn btn-sun" id="wa-send" href="https://wa.me/5579998338450" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Thales Santos Silva</b> · Advogado · OAB/SE 15.758</span>
+    <span>Direito Ambiental · Público e Administrativo · Previdenciário</span>
+    <p class="legal">As informações deste site têm caráter informativo e não substituem a análise de um caso concreto por profissional habilitado. © 2026 Thales Santos Silva.</p>
+  </div>
+</footer>
+
+<script>
+/* Ajuste aqui os links de venda e as redes. Botões e canais vazios ficam ocultos. */
+const CONFIG = {
+  whatsapp: '5579998338450',
+  instagram: '',   // ex.: 'https://instagram.com/seuperfil'
+  linkedin: '',    // ex.: 'https://linkedin.com/in/seuperfil'
+  ebook: {
+    preco: 'R$ 47',
+    rotuloPreco: 'Preço de lançamento',
+    lojas: [
+      { nome: 'Hotmart', url: '' },
+      { nome: 'Kiwify', url: '' },
+      { nome: 'Amazon', url: '' }
+    ]
+  }
+};
+
+const waLink = (msg) => 'https://wa.me/' + CONFIG.whatsapp + (msg ? '?text=' + encodeURIComponent(msg) : '');
+document.querySelectorAll('.js-wa').forEach(a => { a.href = waLink(a.dataset.msg || ''); });
+
+document.getElementById('price').textContent = CONFIG.ebook.preco;
+document.getElementById('price-label').textContent = CONFIG.ebook.rotuloPreco;
+const buy = document.getElementById('buy-actions');
+CONFIG.ebook.lojas.filter(l => l.url).forEach(l => {
+  const a = document.createElement('a');
+  a.className = 'btn btn-line'; a.href = l.url; a.target = '_blank'; a.rel = 'noopener';
+  a.textContent = 'Comprar na ' + l.nome;
+  buy.prepend(a);
+});
+
+[['instagram', 'ch-instagram', 'v-instagram'], ['linkedin', 'ch-linkedin', 'v-linkedin']].forEach(([k, row, link]) => {
+  const url = CONFIG[k];
+  if (!url) return;
+  const el = document.getElementById(link);
+  el.href = url; el.textContent = url.replace(/^https?:\/\/(www\.)?/, '');
+  document.getElementById(row).hidden = false;
+});
+
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.copy);
+    const text = target.textContent.trim();
+    const done = () => { const t = btn.textContent; btn.textContent = 'Copiado'; setTimeout(() => { btn.textContent = t; }, 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(target); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selecionado'; setTimeout(() => { btn.textContent = 'Copiar'; }, 1600); };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+
+const form = document.getElementById('wa-form');
+const send = document.getElementById('wa-send');
+const compose = () => {
+  const nome = document.getElementById('f-nome').value.trim();
+  const assunto = document.getElementById('f-assunto').value;
+  const msg = document.getElementById('f-msg').value.trim();
+  const partes = ['Olá, Thales!'];
+  if (nome) partes.push('Meu nome é ' + nome + '.');
+  partes.push('Assunto: ' + assunto + '.');
+  if (msg) partes.push(msg);
+  send.href = waLink(partes.join(' '));
+};
+form.addEventListener('input', compose);
+form.addEventListener('change', compose);
+form.addEventListener('submit', e => e.preventDefault());
+compose();
+</script>
+
+</body></html>
